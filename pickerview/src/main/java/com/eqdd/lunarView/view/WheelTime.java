@@ -1,10 +1,7 @@
 package com.eqdd.lunarView.view;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
+import android.content.Context;
+import android.view.View;
 
 import com.eqdd.lunarView.R;
 import com.eqdd.lunarView.TimePickerView.Type;
@@ -15,8 +12,11 @@ import com.eqdd.lunarView.listener.OnItemSelectedListener;
 import com.eqdd.lunarView.utils.ChinaDate;
 import com.eqdd.lunarView.utils.LunarCalendar;
 
-import android.content.Context;
-import android.view.View;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.List;
 
 public class WheelTime {
     public static DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
@@ -102,7 +102,7 @@ public class WheelTime {
             wv_day.setAdapter(new ArrayWheelAdapter(ChinaDate.getLunarDays(ChinaDate.leapDays(year))));
         }
         wv_day.setLabel("");
-        wv_day.setCurrentItem(day - 1);
+        wv_day.setCurrentItem(day);
 
 
         wv_hours = (WheelView) view.findViewById(R.id.hour);
