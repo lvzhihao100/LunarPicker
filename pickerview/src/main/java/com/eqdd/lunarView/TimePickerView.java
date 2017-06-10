@@ -41,10 +41,10 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 
         this.rootView=rootView;
         if (rootView==null) {
-            LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
+            LayoutInflater.from(context).inflate(R.layout.lunar_pickerview_time, contentContainer);
             // -----确定和取消按钮
         }else {
-            LayoutInflater.from(context).inflate(R.layout.pickerview_time, rootView);
+            LayoutInflater.from(context).inflate(R.layout.lunar_pickerview_time, rootView);
 
         }
         btnSubmit = findViewById(R.id.btnSubmit);
@@ -56,7 +56,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         //顶部标题
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         // ----时间转轮
-        final View timepickerview = findViewById(R.id.timepicker);
+        final View timepickerview = findViewById(R.id.lunar_timepicker);
         wheelTime = new WheelTime(timepickerview, type);
 
         //默认选中当前时间

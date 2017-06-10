@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.eqdd.lunarView.view.BasePickerView;
-import com.eqdd.lunarView.model.IPickerViewData;
 import com.eqdd.lunarView.view.WheelOptions;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
     private static final String TAG_CANCEL = "cancel";
     public OptionsPickerView(Context context) {
         super(context);
-        LayoutInflater.from(context).inflate(R.layout.pickerview_options, contentContainer);
+        LayoutInflater.from(context).inflate(R.layout.lunar_pickerview_options, contentContainer);
         // -----确定和取消按钮
         btnSubmit = findViewById(R.id.btnSubmit);
         btnSubmit.setTag(TAG_SUBMIT);
